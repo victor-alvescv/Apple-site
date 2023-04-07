@@ -8,6 +8,7 @@
 html {
   font-size: 10px;
   font-family: "SF Pro Display", sans-serif;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -151,7 +152,7 @@ header {
 }
 
 .airpods {
-  background: url("images/hero/airpods/airpods_large.jpg");
+  background: url('images/hero/airpods/airpods_large1.jpg');
   background-size: auto 73.6rem;
   background-position: center;
   background-repeat: no-repeat;
@@ -252,6 +253,31 @@ header {
     background-position: bottom center;
   }
 
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }  
+
+  .airpods {
+    width: 100%;
+    margin: 1.2rem 0;
+  }
+
+  .ipad {
+    width: 100%;
+    margin: 1.2rem 0;
+  }
+  
+  .mac {
+    width: 100%;
+    margin: 1.2rem 0;
+  }
+  
+  .homepod {
+    width: 100%;
+    margin: 0;
+  }
+
   .title-heading {
     font-size: 4.4rem;
   }
@@ -276,6 +302,31 @@ header {
     height: 4.8rem;
     transition: background 0.36s cubic-bezier(0.32, 0.08, 0.24, 1),
       height 0.56s cubic-bezier(0.32, 0.08, 0.24, 1);
+  }
+
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+  }  
+
+  .airpods {
+    width: 100%;
+    margin: 1.2rem 0;
+  }
+
+  .ipad {
+    width: 100%;
+    margin: 1.2rem 0;
+  }
+  
+  .mac {
+    width: 100%;
+    margin: 1.2rem 0;
+  }
+  
+  .homepod {
+    width: 100%;
+    margin: 0;
   }
 
   header .container {
