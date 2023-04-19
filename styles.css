@@ -11,6 +11,30 @@ html {
   scroll-behavior: smooth;
 }
 
+li {
+  list-style-type: none;
+  margin-right: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  padding-bottom: 3px;
+  border-bottom: 2px solid transparent;
+  transition: all 300ms ease;
+  color: white;
+} 
+
+li:hover {
+  border-color: rgba(255, 255, 255, 0.788);
+  color: rgba(255, 255, 255, 0.788);
+}
+
+ul {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
 a {
   display: block;
   text-decoration: none;
@@ -137,11 +161,24 @@ header {
 .watch {
   background: url("images/hero/watch/watch_large.jpg");
 }
+
+.appletv {
+  background: url('images/hero/apple-tv/apple-tv.jpg');
+}
+
 .title-heading-watch {
   height: 7.8rem;
   background: url("images/hero/watch/logo_watch_large.png") center no-repeat;
   background-size: auto 7.8rem;
   margin-top: 1.6rem;
+}
+
+.title-heading-tv {
+  height: 7.8rem;
+  background: url("images/hero/apple-tv/apple-tv-logo.png") center no-repeat;
+  background-size: auto 5.8rem;
+  margin-top: 1.6rem;
+  margin-bottom: 20px;
 }
 
 .hero {
@@ -233,6 +270,35 @@ header {
 
 .iphone14-pro {
   border-top: none;
+}
+
+.footer {
+  background-color: black;
+}
+
+.footer__logo {
+   width: 50px;
+   cursor: pointer;
+   transition: all 300ms ease;
+}
+
+.footer__logo:hover {
+  transform: rotate(10deg);
+}
+
+.footer .container {
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+}
+
+
+
+.footer .title {
+  padding-top: 0px;
 }
 
 @media screen and (max-width: 1068px) {
