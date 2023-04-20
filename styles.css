@@ -11,28 +11,29 @@ html {
   scroll-behavior: smooth;
 }
 
-li {
-  list-style-type: none;
-  margin-right: 20px;
-  font-size: 14px;
-  cursor: pointer;
-  padding-bottom: 3px;
-  border-bottom: 2px solid transparent;
-  transition: all 300ms ease;
-  color: white;
-} 
-
-li:hover {
-  border-color: rgba(255, 255, 255, 0.788);
-  color: rgba(255, 255, 255, 0.788);
-}
-
-ul {
+.footer__links {
   display: flex;
   text-align: center;
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+}
+
+.footer__link {
+  list-style-type: none;
+  margin-right: 20px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 300ms ease;
+  color: white;
+}
+
+.footer__link:nth-child(4) {
+  margin-right: 0px;
+}
+
+.footer__link:hover {
+  color: rgba(255, 255, 255, 0.788);
 }
 
 a {
@@ -62,6 +63,7 @@ header {
   align-items: center;
   justify-content: space-between;
   margin: 0 -1rem;
+  animation: fadeOn 2s forwards;
 }
 
 .nav-list-mobile {
@@ -73,6 +75,7 @@ header {
   color: #fff;
   padding: 0 1rem;
   transition: opacity 0.5s;
+  cursor: default;
 }
 
 .nav-link:hover {
@@ -83,6 +86,7 @@ header {
   width: 1.6rem;
   height: 4.4rem;
   background: url("images/icons/apple.svg") center no-repeat;
+  cursor: pointer;
 }
 
 .nav-link-search {
@@ -108,12 +112,17 @@ header {
   color: white;
   text-align: center;
   padding-top: 5.5rem;
+  opacity: 0;
+  animation: fadeOn 1s forwards;
+  animation-delay: 0.5s;
 }
 
 .title-heading {
   font-size: 5.6rem;
   line-height: 1.07143;
   letter-spacing: -0.005rem;
+  animation: fadeOn 1s forwards;
+  opacity: 0;
 }
 
 .title-sub-heading {
@@ -121,6 +130,8 @@ header {
   margin-top: 0.6rem;
   letter-spacing: 0.008rem;
   font-weight: 400;
+  opacity: 0;
+  animation: fadeOn 1s forwards;
 }
 
 .title-price {
@@ -132,6 +143,9 @@ header {
 .cta {
   text-align: center;
   margin-top: 1.8rem;
+  animation: fadeOn 1s forwards;
+  opacity: 0;
+  animation-delay: 0.8s;
 }
 
 .cta-link {
@@ -163,7 +177,7 @@ header {
 }
 
 .appletv {
-  background: url('images/hero/apple-tv/apple-tv.jpg');
+  background: url("images/hero/apple-tv/apple-tv.jpg");
 }
 
 .title-heading-watch {
@@ -189,7 +203,7 @@ header {
 }
 
 .airpods {
-  background: url('images/hero/airpods/airpods_large1.jpg');
+  background: url("images/hero/airpods/airpods_large1.jpg");
   background-size: auto 73.6rem;
   background-position: center;
   background-repeat: no-repeat;
@@ -277,9 +291,9 @@ header {
 }
 
 .footer__logo {
-   width: 50px;
-   cursor: pointer;
-   transition: all 300ms ease;
+  width: 50px;
+  cursor: pointer;
+  transition: all 300ms ease;
 }
 
 .footer__logo:hover {
@@ -293,15 +307,26 @@ header {
   justify-content: center;
   align-items: center;
   padding-bottom: 100px;
+  background: url("/images/hero/footer-back-large.jpg");
+  background-size: auto 90.6rem;
+  background-position: center;
+  max-width: initial;
 }
-
-
 
 .footer .title {
   padding-top: 0px;
 }
 
 @media screen and (max-width: 1068px) {
+  .footer .container {
+    height: 10px;
+    max-width: 98rem;
+    background: url("/images/hero/footer-back.jpg");
+    background-size: auto 43.6rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: initial;
+  }
   .iphone-14-pro {
     background: url("images/hero/iphone-14-pro/iphone_14_pro_medium.jpg");
   }
@@ -322,7 +347,7 @@ header {
   .wrapper {
     display: flex;
     flex-direction: column;
-  }  
+  }
 
   .airpods {
     width: 100%;
@@ -333,12 +358,12 @@ header {
     width: 100%;
     margin: 1.2rem 0;
   }
-  
+
   .mac {
     width: 100%;
     margin: 1.2rem 0;
   }
-  
+
   .homepod {
     width: 100%;
     margin: 0;
@@ -373,7 +398,7 @@ header {
   .wrapper {
     display: flex;
     flex-direction: column;
-  }  
+  }
 
   .airpods {
     width: 100%;
@@ -384,12 +409,12 @@ header {
     width: 100%;
     margin: 1.2rem 0;
   }
-  
+
   .mac {
     width: 100%;
     margin: 1.2rem 0;
   }
-  
+
   .homepod {
     width: 100%;
     margin: 0;
@@ -409,6 +434,7 @@ header {
 
   .nav-list-mobile {
     display: flex;
+    animation: none;
   }
 
   .nav-item {
@@ -560,6 +586,16 @@ header {
     background-position: bottom center;
   }
 
+  .footer .container {
+    height: 10px;
+    max-width: 98rem;
+    background: url("/images/hero/footer-back.jpg");
+    background-size: auto 43.6rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    max-width: initial;
+  }
+
   .title {
     padding-top: 3.7rem;
   }
@@ -587,5 +623,27 @@ header {
 
   .cta-link {
     font-size: 1.9rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes fadeOn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }
